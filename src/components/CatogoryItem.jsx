@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   flex: 1;
   position: relative;
-  background-color: #98db2d;
+  background-color: #f5fbfd;
   height: 70vh;
   margin: 5px;
 
@@ -25,12 +25,13 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-  color: white;
+  color: black;
 `;
 
 const Button = styled.button`
   border: none;
   font-weight: 600;
+  margin-top: 10px;
   padding: 10px;
   background-color: white;
   color: gray;

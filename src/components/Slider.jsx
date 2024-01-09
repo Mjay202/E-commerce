@@ -19,8 +19,8 @@ const Container = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX( ${props => props.slideIndex * -100}vw);
-    transition: all 1.5s ease
+    transform: translateX( ${(props) => props.$slideindex * -100}vw);
+    transition: all 1.5s ease;
     `;
 
 const Slide = styled.div`
@@ -28,7 +28,7 @@ const Slide = styled.div`
     width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #${props => props.bg }
+    background-color: #${(props) => props.$bg };
 `;
 const ImgContainer = styled.div`
     height: 100%;
@@ -72,8 +72,8 @@ const Arrow = styled.div`
     top: 0;
     bottom: 0;
     margin: auto;
-    left: ${props => props.direction === "left" && "10px"};
-    right: ${props => props.direction === "right" && "10px"};
+    left: ${(props) => props.direction === "left" && "10px"};
+    right: ${(props) => props.direction === "right" && "10px"};
     cursor: pointer;
     opacity: 0.8;
     z-index: 2;
@@ -81,55 +81,45 @@ const Arrow = styled.div`
 `;
 
 const Slider = () => {
-    const [slideIndex, setslideIndex] = useState (0);
+    const [slideindex, setSlideindex] = useState (0);
     const handleClick = (direction) => {
         if (direction === "left") {
-            setslideIndex(slideIndex > -1 ? slideIndex - 1 : 1)
+            setSlideindex(slideindex > -1 ? slideindex - 1 : 1)
             
         } else {
-            setslideIndex(slideIndex < 1 ? slideIndex + 1 : -1)
+            setSlideindex(slideindex < 1 ? slideindex + 1 : -1)
         }
     };
-  return (
-    <Container>
-        <Arrow direction="left" onClick={()=> handleClick("left")}>
-            <ArrowLeftOutlined/>
+ 
+    return (
+      <Container>
+        <Arrow direction="left" onClick={() => handleClick("left")}>
+          <ArrowLeftOutlined />
         </Arrow>
-        <Wrapper slideIndex ={slideIndex}>
-            {sliderItems.map((item)=> (
-                
-                <Slide bg={item.bg}>
-                <ImgContainer>
-                <Image src={item.img} alt="first slide"/>
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>
-                        {item.title}
-                    </Title>
-                    <Description>
-                        {item.desc}
-                        <br />
-                        GET FLAT 30% OFF FOR NEW ARRIVALS.
-                        
-                    </Description>
-                    <Button>
-                        SHOP NOW
-                    </Button>
-                </InfoContainer>
-            </Slide > 
-            
-            
-            
-            
-            ))}
+        <Wrapper $slideindex={slideindex}>
+        
+          {sliderItems.map((item) => (
+            <Slide $bg={item.bg} key={item.id}>
+              <ImgContainer>
+                <Image src={item.img} alt="Slide img" />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>{item.title}</Title>
+                <Description>
+                  {item.desc}
+                  <br />
+                  GET FLAT 30% OFF FOR NEW ARRIVALS.
+                </Description>
+                <Button>SHOP NOW</Button>
+              </InfoContainer>
+            </Slide>
+          ))}
         </Wrapper>
-        <Arrow direction="right" onClick={()=> handleClick("right")}>
-            <ArrowRightOutlined/>
+        <Arrow direction="right" onClick={() => handleClick("right")}>
+          <ArrowRightOutlined />
         </Arrow>
-    
-    </Container>
-
-  )
+      </Container>
+    );
 }
 
 export default Slider

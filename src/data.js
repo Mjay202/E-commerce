@@ -1,7 +1,9 @@
+
+
 export const sliderItems = [
   {
     id: 1,
-    img: "https://www.pexels.com/photo/elegant-shoes-on-light-white-background-6046186/",
+    img: "",
     title: "SUMMER SALE",
     desc: "DON'T COMPROMISE ON STYLE!",
     bg: "C5C7C1",
@@ -9,10 +11,10 @@ export const sliderItems = [
 
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1630079632812-ad825086ac4e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://www.canva.com/design/DAF5TTeHKIk/view",
     title: "WINTER SALE",
     desc: "DON'T COMPROMISE ON STYLE!",
-    bg: "BDC8A3",
+    bg: "d8dee5",
   },
 
   {
@@ -41,3 +43,30 @@ export const categoryItems = [
     title: "COUPLE FASHION",
   },
 ];
+
+export const popularProduct = [
+  {
+    id: 1,
+    img: ""
+  },
+  {
+    id: 2,
+    img: ""
+  },
+  {
+    id: 3,
+    img: ""
+  },
+  {
+    id: 4,
+    img: ""
+  },
+  {
+    id: 5,
+    img: ""
+  },
+  {
+    id: 6,
+    img: ""
+  },
+]
