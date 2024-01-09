@@ -12,21 +12,35 @@ const Container = styled.div`
 
 const Title = styled.h1`
     font-size: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 `;
 
 const Desc = styled.div`
     font-size: 24px;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 `;
 
 const InputContainer  = styled.div`
-    width: 80%;
+    width: 40%;
     height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
 `;
-const Input = styled.input``;
-const Button = styled.button``;
+const Input = styled.input`
+    border: none;
+    padding-left: 20px;
+    flex: 8;
+`;
+const Button = styled.button`
+    flex: 1;
+    border: none;
+    background-color: teal;
+    color: white
+
+`;
 
 const Newsletter = () => {
   return (
@@ -35,7 +49,7 @@ const Newsletter = () => {
             Newsletter
         </Title>
         <Desc>
-            Get news update on your chosen products!
+            Get news update on your favourite products!
         </Desc>
         <InputContainer>
             <Input placeholder="Your email"/>
