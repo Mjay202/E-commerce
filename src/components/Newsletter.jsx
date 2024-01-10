@@ -38,8 +38,12 @@ const Button = styled.button`
     flex: 1;
     border: none;
     background-color: teal;
-    color: white
+    color: white;
+    cursor: pointer;
 
+    &:hover{
+        transform: scale(1.1);
+    }
 `;
 
 const Newsletter = () => {

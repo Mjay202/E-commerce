@@ -69,8 +69,15 @@ const List = styled.ul`
 `;
 const ListItems = styled.li`
     width: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     cursor: pointer;
+    font-size: 15px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        color: teal;
+    }
 `;
 
 const Right = styled.div`
@@ -98,8 +105,9 @@ const ContactItem = styled.div`
     cursor: pointer;
 
     &:hover {
-        color: black;
+        color: teal;
         font-weight: 400;
+        transform: scale(1.05);
     }
 `
 

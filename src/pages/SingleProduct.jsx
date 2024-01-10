@@ -44,7 +44,7 @@ const Desc = styled.p`
 `
 const Price = styled.p`
   font-size: 40px;
-  font-weight: 200;
+  font-weight: 400;
 `
 const FilterContainer = styled.div`
   display: flex;
@@ -104,10 +104,11 @@ const Amount = styled.span`
   justify-content: center;
   margin: 0px 10px;
   border-radius: 20%;
-  background-color: gray;
+  border: 1px solid teal;
 `
 const Button = styled.button`
   padding: 10px;
+  border-radius: 2px;
   border: 1px solid teal;
   transition: all 0.5 ease;
 
