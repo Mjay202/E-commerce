@@ -10,7 +10,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin: 5px;
-    background-color: antiquewhite;
+    background-color: transparent;
     position: relative;
 `
 const Circle = styled.div`
@@ -20,7 +20,11 @@ const Circle = styled.div`
   background-color: white;
   /* position: absolute; */
 `
-const Image = styled.img``
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
 const Info = styled.div`
   opacity: 0;
   width: 100%;
@@ -62,7 +66,7 @@ const Product = ({item}) => {
   return (
     <Container>
       <Circle>
-        <Image />
+        <Image src={item.img}/>
         <Info>
           <Icon>
             <ShoppingCartOutlined />

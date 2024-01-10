@@ -47,26 +47,32 @@ export const categoryItems = [
 export const popularProduct = [
   {
     id: 1,
-    img: ""
+    img: "https://shorturl.at/bTVW8",
+    name: "Denim Short Women",
   },
   {
     id: 2,
-    img: ""
+    img: "https://shorturl.at/stuvV",
+    name: "Adidas Prime Extra",
   },
   {
     id: 3,
-    img: ""
+    img: "https://shorturl.at/aBGJ9",
+    name: "White Shirt",
   },
   {
     id: 4,
-    img: ""
+    img: "",
+    name: "",
   },
   {
     id: 5,
-    img: ""
+    img: "",
+    name: "",
   },
   {
     id: 6,
-    img: ""
+    img: "",
+    name: "",
   },
-]
+];
