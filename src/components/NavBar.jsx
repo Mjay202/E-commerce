@@ -32,10 +32,20 @@ const SearchContainer = styled.div`
     align-items: center;
     padding: 5px;
     border: 0.5px solid lightgray;
+    height: 20px;
+    justify-content: space-between;
     `;
 
 const Input = styled.input`
     border: none;
+    padding: 3px;
+    height: 100%;
+    flex: 5;
+    margin-left: 0;
+`;
+
+const Icon = styled.div`
+    flex: 5;
 `;
 
 const Center = styled.div`
@@ -68,8 +78,10 @@ const NavBar = () => {
             <Left>
                 <Language>EN</Language>
                 <SearchContainer>
-                    <Input></Input>
-                    <Search style={{color:"gray", fontSize:16}}/>
+                    <Input/>
+                    <Icon>
+                        <Search style={{color:"gray", fontSize:16}} />
+                    </Icon>
                 </SearchContainer>
             </Left>
             <Center>
