@@ -15,51 +15,72 @@ const Container = styled.div`
 `;
 const Left = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
     
 `;
 const FilterTitle = styled.h4`
     margin-right: 10px;
 `;
 const FilterItems = styled.select`
-    
+    margin-right: 10px;
+    padding: 10px;
 `;
-const Options = styled.option`
-    
+const Option = styled.option`
+    margin-bottom: 10px;
 `;
 
 const Right = styled.div`
-    
+    display: flex;
+    align-items: center;
 `;
 
 const ProductList = () => {
   return (
     <>
-    <NavBar/>
-    <Advert/>
-    <Title>Mens' Fashion</Title>
-    <Container>
+      <NavBar />
+      <Advert />
+      <Title>Mens' Fashion</Title>
+      <Container>
         <Left>
-            <FilterTitle>
-                Size:
-            </FilterTitle>
-            <FilterItems>
-                <Options>XXL</Options>
-                <Options>XL</Options>
-                <Options>L</Options>
-                <Options>M</Options>
-                <Options>S</Options>
-                <Options>XS</Options>
-            </FilterItems>
+          <FilterTitle>Filter Products:</FilterTitle>
+          <FilterItems>
+            <Option disabled selected>
+              Size
+            </Option>
+            <Option>XXL</Option>
+            <Option>XL</Option>
+            <Option>L</Option>
+            <Option>M</Option>
+            <Option>S</Option>
+            <Option>XS</Option>
+          </FilterItems>
+          <FilterItems>
+            <Option disabled selected>
+              Colour
+            </Option>
+            <Option>Red</Option>
+            <Option>Yellow</Option>
+            <Option>White</Option>
+            <Option>Black</Option>
+            <Option>Blue</Option>
+            <Option>Green</Option>
+          </FilterItems>
         </Left>
-        <Right>Right</Right>
-    </Container>
-    <Products/>
-    <Newsletter/>
-    <Footer/>
-
+        <Right>
+          <FilterTitle>Sort Products:</FilterTitle>
+          <FilterItems>
+            <Option selected> Newest </Option>
+            <Option>Price (asc)</Option>
+            <Option>Price (desc)</Option>
+          </FilterItems>
+        </Right>
+      </Container>
+      <Products />
+      <Newsletter />
+      <Footer />
     </>
-    
-  )
+  );
 }
 
 export default ProductList
