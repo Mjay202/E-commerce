@@ -1,15 +1,17 @@
 import styled from 'styled-components'
+import {mobile} from '../responsive'
 
 const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: teal;
-    font-size: 14px;
-    font-weight: 500;
-    color: white;
-    height: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  height: 30px;
 
+  ${mobile({ display: "none" })}
 `;
 
 const Advert = () => {
