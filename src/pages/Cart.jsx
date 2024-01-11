@@ -67,15 +67,20 @@ const ProductDetails= styled.div`
 `
 const Image = styled.img`
     object-fit: cover;
-    width: 30vw;
-    height: 30vh;
+    width: 20vw;
+    height: 25vh;
 `
 const Details = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 30px; 
+    
+    
 `
-const ProductName = styled.div``
+const ProductName = styled.div`
+    width: 100%;
+`
 const ProductId = styled.div``
 const ProductColor = styled.div`
     width: 20px;
@@ -110,13 +115,47 @@ const Price = styled.div`
 
 const Summary = styled.div`
     flex: 1;
-    background-color: red;
+    border: 0.5px solid black ;
+    padding: 10px;
+    height: 50vh;
+`;
+
+const SummaryTitle = styled.h1`
+    font-weight: 500;
+    text-align: center;
+`
+const SummaryItem = styled.div`
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+   
+`
+const SummaryItemText = styled.span`
+  font-size: ${(props) => props.type === "total" && "24px"};
+  font-weight: ${(props) => props.type === "total" && "500"};
+`;
+const SummaryItemPrice = styled.span`
+  font-size: ${(props) => props.type === "total" && "24px"};
+  font-weight: ${(props) => props.type === "total" ? "500" : "600"};
+`;
+const Button = styled.button`
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  padding: 15px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 `;
 
 const Hr = styled.hr`
   border: none;
   background-color: #efe6e6;
   height: 1px;
+ 
 `;
 
 const Cart = () => {
@@ -172,31 +211,50 @@ const Cart = () => {
             <Hr />
             <Product>
               <ProductDetails>
-                <Image src="https://images.pexels.com/photos/10726876/pexels-photo-10726876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <Image src="https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
                 <Details>
                   <ProductName>
                     <b>Product Name:</b> White sneakers
                   </ProductName>
                   <ProductId>
-                    <b>Product Id:</b> D2344568
+                    <b>Product Id:</b> W23445678
                   </ProductId>
                   <ProductColor color="skyblue" />
                   <ProductSize>
-                    <b>Product Size: </b> M
+                    <b>Product Size: </b> L
                   </ProductSize>
                 </Details>
               </ProductDetails>
               <PriceDetails>
                 <AmountContainer>
                   <Add style={{ cursor: "pointer" }} />
-                  <Amount>2</Amount>
+                  <Amount>1</Amount>
                   <Remove style={{ cursor: "pointer" }} />
                 </AmountContainer>
-                <Price> $ 150</Price>
+                <Price> $ 220</Price>
               </PriceDetails>
             </Product>
           </Info>
-          <Summary></Summary>
+          <Summary>
+            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText> Subtotal:</SummaryItemText>
+              <SummaryItemPrice>$ 320</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText> Estimated Shipping:</SummaryItemText>
+              <SummaryItemPrice>$ 40</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText> Discount:</SummaryItemText>
+              <SummaryItemPrice>$ -20.5</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText type="total"> Total:</SummaryItemText>
+              <SummaryItemPrice type="total"> $ 320</SummaryItemPrice>
+            </SummaryItem>
+            <Button>CHECK OUT NOW</Button>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Newsletter />

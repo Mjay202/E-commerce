@@ -15,7 +15,7 @@ const Container = styled.div`
 const Advert = () => {
   return (
     <Container>
-        <marquee behavior="" direction="right">Number one Best Selling Store in Africa!!! Best Deals, Varieties of Choices, Global brands.. </marquee></Container>
+        Number one Best Selling Store in Africa!!! Best Deals, Varieties of Choices, Global brands.. </Container>
   )
 }
 
