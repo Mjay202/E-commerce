@@ -45,7 +45,7 @@ const TopButton = styled.button`
     border: none;
   }
 
-  ${mobile({ padding: "3px 5px", fontSize: '7px'})}
+  ${mobile({ padding: "3px 2px", fontSize: '7px', width: '120px'})}
 `;
 const TopTexts = styled.div`
     display: flex;
@@ -62,7 +62,7 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  ${mobile({ flexDirection: "column" })}
+  ${mobile({ flexDirection: "column" , justifyContent: 'center', alignItems: 'center' })}
 `;
 
 const Info = styled.div`
@@ -78,10 +78,11 @@ const ProductDetails= styled.div`
     display: flex;
 `
 const Image = styled.img`
-    object-fit: cover;
-    width: 20vw;
-    height: 25vh;
-`
+  object-fit: cover;
+  width: 20vw;
+  height: 25vh;
+  ${mobile({ width: "30vw", height: '15vh' })}
+`;
 const Details = styled.div`
     display: flex;
     flex-direction: column;
@@ -91,51 +92,65 @@ const Details = styled.div`
     
 `
 const ProductName = styled.div`
-    width: 100%;
-`
-const ProductId = styled.div``
+  ${mobile({ fontSize: "10px", marginBottom: '3px' })}
+`;
+
+const ProductId = styled.div`
+  ${mobile({ fontSize: "10px", marginBottom: "3px" })}
+`;
+
 const ProductColor = styled.div`
-    width: 20px;
-    height: 20px;
-    background-color: ${(props) => props.color};
-    border-radius: 50%;
-`
-const ProductSize = styled.div``
+  width: 20px;
+  height: 20px;
+  background-color: ${(props) => props.color};
+  border-radius: 50%;
+  ${mobile({ fontSize: "10px", marginBottom: "3px", width: '10px', height: '10px' })}
+`;
+
+const ProductSize = styled.div`
+  ${mobile({ fontSize: "10px", marginBottom: "3px" })}
+`;
 
 
 const PriceDetails = styled.div`
-    flex: 1;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
+  flex: 1;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${mobile({ fontSize: "10px", margin: "3px" })}
+`;
 
 const AmountContainer = styled.div`
-    display: flex;
-    margin-bottom: 30px;
-    align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  ${mobile({ fontSize: "7px", marginBottom: "3px" })}
 `;
 const Amount = styled.div`
     font-size: 25px;
     margin: 0px 10px;
+    ${mobile({ fontSize: "20px", marginBottom: '3px' })}
 `;
 const Price = styled.div`
-    font-size: 25px;
-    font-weight: 500;
+  font-size: 25px;
+  font-weight: 500;
+  ${mobile({ fontSize: "20px", marginBottom: "3px" })}
 `;
 
 const Summary = styled.div`
-    flex: 1;
-    border: 0.5px solid black ;
-    padding: 10px;
-    height: 50vh;
+  flex: 1;
+  border: 0.5px solid black;
+  padding: 10px;
+  height: 50vh;
+  ${mobile({ height: "auto", marginBottom: "3px", width: '70vw', marginTop: '20px'})}
 `;
 
 const SummaryTitle = styled.h1`
-    font-weight: 500;
-    text-align: center;
-`
+  font-weight: 500;
+  text-align: center;
+  ${mobile({ fontSize: "20px", marginBottom: "3px" , fontWeight: '700'})}
+`;
 const SummaryItem = styled.div`
     margin: 20px 0px;
     display: flex;
@@ -145,6 +160,8 @@ const SummaryItem = styled.div`
 const SummaryItemText = styled.span`
   font-size: ${(props) => props.type === "total" && "24px"};
   font-weight: ${(props) => props.type === "total" && "500"};
+
+  ${mobile({ fontSize: "10px", marginBottom: "3px" })}
 `;
 const SummaryItemPrice = styled.span`
   font-size: ${(props) => props.type === "total" && "24px"};
@@ -161,6 +178,7 @@ const Button = styled.button`
     background-color: black;
     color: white;
   }
+  ${mobile({ fontSize: "20px", marginBottom: "3px", padding: '5px'})}
 `;
 
 const Hr = styled.hr`
