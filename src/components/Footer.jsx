@@ -1,34 +1,44 @@
 import { Facebook, Home, Instagram, MailOutline, Phone, Pinterest, Twitter } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from "../responsive";
+
 
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 50vh;
-    flex-wrap: wrap;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 50vh;
+  flex-wrap: wrap;
+  ${mobile({ height: "auto", padding: "10px", flexDirection: 'column', width: '90vw' })}
 `;
 
 const Left = styled.div`
-    flex: 1;
+  flex: 1;
+  
+  ${mobile({ width: "100%", })}
 `;
+
 const Logo = styled.h2`
-    font-size: 30px;
-    margin-bottom: 20px;
-    
+  font-size: 30px;
+  margin-bottom: 20px;
+  ${mobile({ fontSize: "20px", margin: '15px' })}
 `;
+
 const Desc = styled.p`
-    font-weight: 400;
-    margin-bottom: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  ${mobile({ fontSize: "12px", fontWeight: '200', margin: "15px" })}
 `;
+
 const Socials = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  ${mobile({ pad: "10px", margin: "15px" })}
 `;
+
 const SocialIcon = styled.div`
   margin-left: 15px;
   cursor: pointer;
@@ -46,6 +56,8 @@ const SocialIcon = styled.div`
     width: 40px;
     height: 40px;
   }
+
+  ${mobile({ fontSize: "10px", margin: "10px", width: '25px', height: '25px'})}
 `;
 
 const Center = styled.div`
@@ -55,29 +67,32 @@ const Center = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 20px;
+  ${mobile({ width: "100%", padding: '5px', margin:'2px'})}
 `;
 const Heading = styled.h3`
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  ${mobile({ marginBottom: "10px", fontSize: '15px' })}
 `;
 const List = styled.ul`
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  ${mobile({ width: "100%", padding: "10px" })}
 `;
 const ListItems = styled.li`
-    width: 50%;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: all 0.5s ease;
+  width: 50%;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.5s ease;
 
-    &:hover {
-        transform: scale(1.1);
-        color: teal;
-    }
+  &:hover {
+    transform: scale(1.1);
+    color: teal;
+  }
+  ${mobile({ width: "20%", marginBottom: '2px', padding: "10px", fontSize: '10px' })}
 `;
 
 const Right = styled.div`
@@ -87,29 +102,32 @@ const Right = styled.div`
   align-items: flex-start;
   flex-direction: column;
   padding: 20px;
+  ${mobile({ width: "100%" , padding : '30px'})}
 `;
 
 const ContactHeading = styled.h3`
-    margin-bottom : 30px;
-    
+  margin-bottom: 30px;
+  ${mobile({ marginBottom: '15px' })}
 `;
 
 const ContactItem = styled.div`
-    margin-bottom: 20px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    color: gray;
-    font-weight: 500;
-    transition: all 0.5s ease;
-    cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  cursor: pointer;
 
-    &:hover {
-        color: teal;
-        font-weight: 400;
-        transform: scale(1.05);
-    }
-`
+  &:hover {
+    color: teal;
+    font-weight: 400;
+    transform: scale(1.05);
+  }
+
+  ${mobile({ width: "100%", fontSize: "12px", marginBottom: "2px" })}
+`;
 
 const Footer = () => {
   return (

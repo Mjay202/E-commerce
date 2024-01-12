@@ -40,7 +40,7 @@ const SearchContainer = styled.div`
   height: 20px;
   justify-content: space-between;
 
-  ${mobile({ marginLeft: "5px", height: "10px", padding: '3px'})}
+  ${mobile({ marginLeft: "5px", height: "10px", padding: '3px', width: '100%'})}
 `;
 
 const Input = styled.input`
@@ -54,6 +54,9 @@ const Input = styled.input`
 
 const Icon = styled.div`
     flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 `;
 
 const Center = styled.div`
