@@ -8,9 +8,10 @@ import styled from 'styled-components'
 import { mobile } from "../responsive";
 
 const Wrapper = styled.div`
-    padding: 20px;
+  padding: 20px;
+  ${mobile({ padding: "3px" , margin: '3px', width: '100%'})}
+`;
 
-`
 const Title = styled.h1`
   font-weight: 300;
   text-align: center;
@@ -43,22 +44,27 @@ const TopButton = styled.button`
     color: white;
     border: none;
   }
+
+  ${mobile({ padding: "3px 5px", fontSize: '7px'})}
 `;
 const TopTexts = styled.div`
     display: flex;
 
 `
 const TopText = styled.div`
-    margin-left: 10px;
-    text-decoration: underline;
-    cursor: pointer;
-`
+  margin-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  ${mobile({ marginLeft: "3px", fontSize: '10px' })}
+`;
 
 const Bottom = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-`
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  ${mobile({ flexDirection: "column" })}
+`;
+
 const Info = styled.div`
     flex: 3;
 `

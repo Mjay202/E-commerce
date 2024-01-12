@@ -11,13 +11,13 @@ const Container = styled.div`
   padding: 20px;
   height: 50vh;
   flex-wrap: wrap;
-  ${mobile({ height: "auto", padding: "10px", flexDirection: 'column', width: '90vw' })}
+  ${mobile({ height: "auto", padding: "3px",  flexDirection: 'column', width: '90vw' })}
 `;
 
 const Left = styled.div`
   flex: 1;
   
-  ${mobile({ width: "100%", })}
+  ${mobile({ width: "100%", padding: '0px'})}
 `;
 
 const Logo = styled.h2`
@@ -102,7 +102,7 @@ const Right = styled.div`
   align-items: flex-start;
   flex-direction: column;
   padding: 20px;
-  ${mobile({ width: "100%" , padding : '30px'})}
+  ${mobile({ width: "100%" , padding : '0px', margin: '30px'})}
 `;
 
 const ContactHeading = styled.h3`
