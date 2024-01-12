@@ -4,27 +4,32 @@ import Advert from '../components/Advert'
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import Products from '../components/Products';
+import { mobile } from "../responsive";
 
 const Title = styled.h1`
-    margin: 10px;
-`
+  margin: 10px;
+  ${mobile({ fontSize: "25px", marginBottom: "3px" })}
+`;
 const Container = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  ${mobile({padding: '10px', marginBottom: "3px" })}
 `;
 const Left = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 `;
 const FilterTitle = styled.h4`
-    margin-right: 10px;
+  margin-right: 10px;
+  ${mobile({ fontSize: "12px", marginRight: "5px" })}
 `;
 const FilterItems = styled.select`
-    margin-right: 10px;
-    padding: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  ${mobile({ padding: "3px", marginRight: "5px" })}
 `;
 const Option = styled.option`
     margin-bottom: 10px;
