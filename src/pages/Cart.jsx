@@ -5,20 +5,26 @@ import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import { Add, ArrowLeftOutlined, ArrowRightOutlined, Remove, ShoppingCartOutlined } from '@material-ui/icons'
 import styled from 'styled-components'
+import { mobile } from "../responsive";
 
 const Wrapper = styled.div`
     padding: 20px;
+
 `
 const Title = styled.h1`
-   font-weight: 300;
-   text-align: center;
-`
+  font-weight: 300;
+  text-align: center;
+  ${mobile({ fontWeight: "200", fontSize: '30px' })}
+`;
+
 const Top = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  ${mobile({ padding: "3px" })}
+`;
+
 const TopButton = styled.button`
   padding: 10px;
   display: flex;
