@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Checkbox from '@material-ui/core/Checkbox';
 import { useState } from 'react';
-
+import { mobile } from "../responsive";
 
 
 
@@ -22,7 +22,8 @@ const Wrapper = styled.div`
   background-color: white;
   border-radius: 5px;
   padding: 20px;
-`
+  ${mobile({ width: "70%" })}
+`;
 const Title = styled.h2`
   margin-bottom: 15px;
   width: 100%;
@@ -39,16 +40,16 @@ const Input = styled.input`
   padding: 10px;
   flex: 1;
   margin: 10px;
-
-`
+  ${mobile({ border: "0.5px solid teal" })}
+`;
 const Agreement = styled.div`
   margin-top: 10px;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: flex-start;
- 
-`
+  ${mobile({ fontSize: "12px" })}
+`;
 const Button = styled.button`
   min-width: 30%;
   margin-top: 10px;
@@ -58,14 +59,13 @@ const Button = styled.button`
   transition: all 0.5s ease;
   border: none;
   border-radius: 2px;
+  ${mobile({ padding: "15px", margin: '15px' })}
 
   &:hover {
     background-color: teal;
     color: white;
-
   }
- 
-`
+`;
 
 const Register = () => {
   const [checked, setChecked] = useState(true);
