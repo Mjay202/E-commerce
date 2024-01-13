@@ -3,17 +3,18 @@ import React from 'react'
 import styled from 'styled-components'
 import { sliderItems } from '../data';
 import { useState } from 'react';
+import { mobile } from "../responsive";
 
 const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    background-color: smokewhite;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: smokewhite;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  ${mobile({ display: "none"})}
 `;
 
 const Wrapper = styled.div`

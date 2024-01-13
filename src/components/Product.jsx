@@ -1,18 +1,20 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from "../responsive";
 
 const Container = styled.div`
-    flex: 1;
-    display: flex;
-    min-width: 280px;
-    height: 350px;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    background-color: transparent;
-    position: relative;
-`
+  flex: 1;
+  display: flex;
+  min-width: 280px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: transparent;
+  position: relative;
+  ${mobile({ margin: "10px" })}
+`;
 const Circle = styled.div`
   width: 200px;
   height: 200px;

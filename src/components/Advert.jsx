@@ -10,7 +10,7 @@ const Container = styled.div`
   font-weight: 500;
   color: white;
   height: 30px;
-  ${mobile({ fontSize: "8px", margin: '20px 0px', width: '100vw ' })}
+  ${mobile({ fontSize: "7px", margin: '20px 0px', width: '100vw ', height: '15px'})}
 `;
 
 const Advert = () => {

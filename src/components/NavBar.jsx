@@ -6,17 +6,18 @@ import {mobile} from '../responsive'
 
 const Container = styled.div`
     height: 60px;
-    ${mobile({height: "20px", paddingTop: '10px'})}
+    ${mobile({height: "20px" })}
 
 `;
 
 const Wrapper = styled.div`
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  ${mobile({ height: "20px", padding: ' 10px ' })}
 `;
 
 const Left = styled.div`
