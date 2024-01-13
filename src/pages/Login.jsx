@@ -11,6 +11,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mobile({ width: "auto", heigth: 'auto'})}
 `;
 
 const Wrapper = styled.div`
@@ -20,7 +21,8 @@ const Wrapper = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-`
+  ${mobile({ width: "70%" })}
+`;
 const Title = styled.h2`
   margin-bottom: 15px;
   width: 100%;
@@ -38,8 +40,8 @@ const Input = styled.input`
   padding: 10px;
   flex: 1;
   margin: 10px;
-
-`
+  ${mobile({ border: "0.5px solid teal" })}
+`;
 const Link = styled.a`
   cursor: pointer;
   display: flex;

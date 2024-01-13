@@ -11,7 +11,7 @@ import SingleProduct from "./pages/SingleProduct";
 
 
 const App = () => {
-  return <Login/>;
+  return <Register/>;
 };
 
 export default App;
