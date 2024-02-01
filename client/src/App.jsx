@@ -6,12 +6,47 @@ import Login from "./pages/Login";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import SingleProduct from "./pages/SingleProduct";
+import {RouterProvider, createBrowserRouter} from "react-router-dom"
 
 
 
 
 const App = () => {
-  return <Register/>;
+
+const router = createBrowserRouter([
+  {
+    path: "/register",
+    element: <Register/>
+  },
+  {
+    path: "/login",
+    element: <Login/>
+  },
+  {
+    path: "/Home",
+    element: <Home/>
+  },
+  {
+    path: "/products",
+    element: <ProductList/>
+  },
+  {
+    path: "/singleproduct/:id",
+    element: <SingleProduct/>
+  },
+]);
+
+
+  return (
+
+    <>
+      <RouterProvider router={ router} />
+    </>
+  )
+
+
+  
+  
 };
 
 export default App;
