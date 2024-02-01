@@ -55,12 +55,27 @@ export const categoryItems = [
   {
     id: 5,
     img: "https://img.freepik.com/free-photo/pair-trainers_144627-3800.jpg?w=740&t=st=1706806049~exp=1706806649~hmac=8e88710c9db210534214472e77a42b628730af1062693631bc12b4abda3b68d8",
-    title: "UNISEX",
+    title: "FOOTWEAR",
   },
   {
     id: 6,
-    img: "https://img.freepik.com/free-photo/young-woman-business-suit-wearing-hat_1303-17700.jpg?w=826&t=st=1706806140~exp=1706806740~hmac=8b83828f680dd987f53d2d0427cad2fd76c815ed6ab7df151df6c595187c63c8",
+    img: "https://img.freepik.com/free-photo/high-heels-make-up-case_23-2147635498.jpg?w=740&t=st=1706830071~exp=1706830671~hmac=419cf1ea1322fd26f673c42d226be404492d91afb9783637a56b78237c4dd5a0",
     title: "ACCESSORIES",
+  },
+  {
+    id: 7,
+    img: "https://img.freepik.com/free-photo/cosmetics-composition-with-space-middle_23-2147692196.jpg?w=826&t=st=1706830274~exp=1706830874~hmac=99f19d3ab53c60e335d7f093c02a767c20df2b3b9b0b57ad383d59ce53618ba6",
+    title: "BEAUTY",
+  },
+  {
+    id: 8,
+    img: "https://img.freepik.com/free-photo/young-woman-business-suit-wearing-hat_1303-17700.jpg?w=826&t=st=1706806140~exp=1706806740~hmac=8b83828f680dd987f53d2d0427cad2fd76c815ed6ab7df151df6c595187c63c8",
+    title: "TRENDS",
+  },
+  {
+    id: 9,
+    img: "https://img.freepik.com/free-photo/beauty-bride-female-glory-bright_1304-3406.jpg?w=826&t=st=1706829853~exp=1706830453~hmac=f21f6b1401469614ae19962775ceb64df8cf81b778b40ed150f37e9e6af4fb67",
+    title: "SPECIALS",
   },
 ];
 
