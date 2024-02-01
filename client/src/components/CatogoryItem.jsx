@@ -6,14 +6,27 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   display: flex;
   flex: 1;
+  width: 30%;
   position: relative;
   background-color: #f5fbfd;
   height: 70vh;
+  margin-top: 20px;
+  opacity: 0.5;
   margin: 5px;
-  ${mobile({ width: "100%", height: '20vh', margin: '10px 0px'})}
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  ${mobile({ width: "100%", height: "20vh", margin: "10px 0px" })}
 `;
 const Img = styled.img`
+  height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+
   ${mobile({ width: "100%", height: "20vh" })}
+
+  
 `;
 
 const Info = styled.div`
@@ -29,7 +42,7 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-  color: black;
+ 
 `;
 
 const Button = styled.button`
@@ -40,11 +53,15 @@ const Button = styled.button`
   background-color: white;
   color: gray;
   cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+    font-weight: 100;
+  }
 `;
 
 const CatogoryItem = ({item}) => {
   return (
-    <Container>
+    <Container >
       <Img src={item.img}/>
       <Info>
         <Title>

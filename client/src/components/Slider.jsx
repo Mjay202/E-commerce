@@ -14,7 +14,7 @@ const Container = styled.div`
   height: 100vh;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none"})}
+  ${mobile({ display: "none" })}
 `;
 
 const Wrapper = styled.div`
@@ -25,11 +25,12 @@ const Wrapper = styled.div`
     `;
 
 const Slide = styled.div`
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    background-color: #${(props) => props.$bg };
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.color};
+  background-color: #${(props) => props.$bg};
 `;
 const ImgContainer = styled.div`
     height: 100%;
@@ -38,7 +39,7 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
     height: 100%;
-    width: 100%;
+    max-width: 90%;
     object-fit: cover;
 `;
 const InfoContainer = styled.div`
@@ -55,11 +56,12 @@ const Description = styled.p`
     letter-spacing: 5px;
 `;
 const Button = styled.button`
-    padding: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    cursor: pointer;
-`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  color: ${(props) => props.color};
+`;
 
 const Arrow = styled.div`
     display:flex;
@@ -100,7 +102,7 @@ const Slider = () => {
         <Wrapper $slideindex={slideindex}>
         
           {sliderItems.map((item) => (
-            <Slide $bg={item.bg} key={item.id}>
+            <Slide $bg={item.bg} key={item.id} color={item.color}>
               <ImgContainer>
                 <Image src={item.img} alt="Slide img" />
               </ImgContainer>
@@ -111,7 +113,7 @@ const Slider = () => {
                   <br />
                   GET FLAT 30% OFF FOR NEW ARRIVALS.
                 </Description>
-                <Button>SHOP NOW</Button>
+                <Button color={item.color}>SHOP NOW</Button>
               </InfoContainer>
             </Slide>
           ))}
