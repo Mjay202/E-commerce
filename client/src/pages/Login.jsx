@@ -50,7 +50,7 @@ const Create = styled.div`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  font-size: 12px;
+  font-size: 9px;
   margin-top: 10px;
   font-weight: 500;
   text-decoration: underline;

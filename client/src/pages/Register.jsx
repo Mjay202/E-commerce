@@ -33,7 +33,7 @@ const Title = styled.h3`
 `;
 const Form = styled.form`
   display: flex;
-
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 `;
