@@ -6,9 +6,9 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 30px ;
   height: 50vh;
   flex-wrap: wrap;
   ${mobile({ height: "auto", padding: "3px",  flexDirection: 'column', width: '90vw' })}
@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const Left = styled.div`
   flex: 1;
-  
+  line-height: 25px;
   ${mobile({ width: "100%", padding: '0px'})}
 `;
 
@@ -36,11 +36,12 @@ const Socials = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
+  gap: 20px;
   ${mobile({ pad: "10px", margin: "15px" })}
 `;
 
 const SocialIcon = styled.div`
-  margin-left: 15px;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -53,8 +54,7 @@ const SocialIcon = styled.div`
   transition: all 0.5s ease;
 
   &:hover {
-    width: 40px;
-    height: 40px;
+    transform: scale(1.1);
   }
 
   ${mobile({ fontSize: "10px", margin: "10px", width: '25px', height: '25px'})}
@@ -63,45 +63,56 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  padding: 20px;
+  padding-left: 20px;
+  /* padding: 20px; */
   ${mobile({ width: "100%", padding: '5px', margin:'2px'})}
 `;
 const Heading = styled.h3`
   margin-bottom: 20px;
+  
   ${mobile({ marginBottom: "10px", fontSize: '15px' })}
 `;
 const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  padding-left: 0px;
+  justify-content: flex-start;
+  align-items: flex-start;
   ${mobile({ width: "100%", padding: "10px" })}
 `;
 const ListItems = styled.li`
   width: 50%;
   margin-bottom: 12px;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
   font-size: 15px;
   transition: all 0.5s ease;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     color: teal;
   }
-  ${mobile({ width: "20%", marginBottom: '2px', padding: "10px", fontSize: '10px' })}
+  ${mobile({
+    width: "20%",
+    marginBottom: "2px",
+    padding: "10px",
+    fontSize: "10px",
+  })}
 `;
 
 const Right = styled.div`
   flex: 1;
   display: flex;
-  justify-content: center;
+  
+  justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  padding: 20px;
+  /* padding: 20px; */
   ${mobile({ width: "100%" , padding : '0px', margin: '30px'})}
 `;
 
@@ -123,7 +134,7 @@ const ContactItem = styled.div`
   &:hover {
     color: teal;
     font-weight: 400;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   ${mobile({ width: "100%", fontSize: "12px", marginBottom: "2px" })}

@@ -16,11 +16,11 @@ const Container = styled.div`
   ${mobile({ margin: "10px" })}
 `;
 const Circle = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background-color: white;
-  /* position: absolute; */
+  position: absolute;
 `
 const Image = styled.img`
   width: 100%;
