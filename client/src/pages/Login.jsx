@@ -9,6 +9,9 @@ const Container = styled.div`
   background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(211, 20, 20, 0.2)),
     url("https://img.freepik.com/free-photo/beautiful-three-young-women-with-gift-bags-walk-city_1157-48967.jpg?w=826&t=st=1706906837~exp=1706907437~hmac=2814aca72e82fc4ec90afe4cd8b4bcb202b793af977e0cd6803ae5931d95a6b1")
       center;
+
+  background-size: contain;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +61,7 @@ const Create = styled.div`
   }
 `;
 const Button = styled.button`
-  min-width: 20%;
+  min-width: 30%;
   margin-top: 20px;
   padding: 10px;
   cursor: pointer;

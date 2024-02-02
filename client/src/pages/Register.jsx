@@ -1,18 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import Checkbox from '@material-ui/core/Checkbox';
-import { useState } from 'react';
+import React from "react";
+import styled from "styled-components";
+import Checkbox from "@material-ui/core/Checkbox";
+import { useState } from "react";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
-
-
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(211, 20, 20, 0.5)),
-    url("https://img.freepik.com/free-photo/three-attractive-african-american-woman-brown-tunic-dress-posed-clothes-store-it-s-time-shopping_627829-695.jpg?w=826&t=st=1706905868~exp=1706906468~hmac=ef8e4174f0806a4757f6e14ff0210701100db6d9312834b215933d1e4239752b")
-      center;
+    url("https://img.freepik.com/free-photo/interior-clothing-store-with-stylish-merchandise-racks-fashionable-brand-design-casual-wear-modern-boutique-empty-fashion-showroom-shopping-centre-with-elegant-merchandise_482257-65537.jpg?w=996&t=st=1706908177~exp=1706908777~hmac=c9db16cae94249d27806375fd84c4ba353b0a4fa309331b5750bcfa776ed23af");
+
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,14 +30,13 @@ const Title = styled.h3`
   width: 100%;
   display: flex;
   justify-content: center;
-  
-`
+`;
 const Form = styled.form`
   display: flex;
-  
+
   flex-wrap: wrap;
   justify-content: center;
-`
+`;
 const Input = styled.input`
   padding: 7px;
   flex: 1;
@@ -64,7 +62,7 @@ const Button = styled.button`
   transition: all 0.5s ease;
   border: none;
   border-radius: 2px;
-  ${mobile({ padding: "15px", margin: '15px' })}
+  ${mobile({ padding: "15px", margin: "15px" })}
 
   &:hover {
     background-color: teal;
@@ -80,28 +78,28 @@ const Register = () => {
 
   return (
     <Container>
-        <Wrapper>
-            <Title>Create a new Account</Title>
-            <Form>
-              <Input placeholder="First Name"/>
-              <Input placeholder="Last Name"/>
-              <Input placeholder="Phone Number" type="number"/>
-              <Input placeholder="Email" type="email"/>
-              <Input placeholder="Password"/>
-              <Agreement>
-                <Checkbox
-                  checked={checked}
-                  onChange={handleChange}
-                  color="primary"
-                  inputProps={{ 'aria-label': 'primary checkbox' }}
-                />
-                <p>By clicking this, you agree to all our terms and conditions.</p>
-              </Agreement>
-              <Button>Create Account</Button>
-            </Form>
-        </Wrapper>
+      <Wrapper>
+        <Title>Create a new Account</Title>
+        <Form>
+          <Input placeholder="First Name" />
+          <Input placeholder="Last Name" />
+          <Input placeholder="Phone Number" type="number" />
+          <Input placeholder="Email" type="email" />
+          <Input placeholder="Password" />
+          <Agreement>
+            <Checkbox
+              checked={checked}
+              onChange={handleChange}
+              color="primary"
+              inputProps={{ "aria-label": "primary checkbox" }}
+            />
+            <p>By clicking this, you agree to all our terms and conditions.</p>
+          </Agreement>
+          <Button>Create Account</Button>
+        </Form>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
