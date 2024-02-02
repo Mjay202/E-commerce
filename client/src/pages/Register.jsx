@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Checkbox from "@material-ui/core/Checkbox";
 import { useState } from "react";
 import { mobile } from "../responsive";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios"
 
 const Container = styled.div`
   width: 100vw;
@@ -45,7 +46,7 @@ const Input = styled.input`
 `;
 const ErrorMsg = styled.div`
   color: red;
-  font-size: 7px;
+  font-size: 10px;
   text-align: center;
   margin: 5px;
 `;
@@ -76,11 +77,14 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+  const navigate = useNavigate()
+
   const [checked, setChecked] = useState(true);
   const handleCheck = (event) => {
     setChecked(event.target.checked);
   };
 
+  const [errMsg, seterrMsg] = useState("")
   const [newUser, setnewUser] = useState({
     firstname: "",
     lastname: "",
@@ -90,14 +94,25 @@ const Register = () => {
   });
 
   const handleChange = (e) => {
+    seterrMsg("")
     setnewUser((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+
+      const res = await axios.post("http://localhost:5200/api/auth/register", newUser);
+      navigate("/login")
+      console.log(res);
+    } catch (err) {
+      seterrMsg(err.message)
+      console.log(err)
+    }
   };
 
   return (
@@ -147,7 +162,8 @@ const Register = () => {
               Login here
             </span>
           </Link>
-          <ErrorMsg></ErrorMsg>
+          
+          <ErrorMsg>{ errMsg}</ErrorMsg>
           <Agreement>
             <Checkbox
               checked={checked}
@@ -157,7 +173,7 @@ const Register = () => {
             />
             <p>By clicking this, you agree to all our terms and conditions.</p>
           </Agreement>
-          <Button onChange={handleSubmit}>Create Account</Button>
+          <Button onClick={handleSubmit}>Create Account</Button>
         </Form>
       </Wrapper>
     </Container>
