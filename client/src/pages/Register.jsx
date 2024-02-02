@@ -43,7 +43,12 @@ const Input = styled.input`
   margin: 5px;
   ${mobile({ border: "0.5px solid teal" })}
 `;
-
+const ErrorMsg = styled.div`
+  color: red;
+  font-size: 7px;
+  text-align: center;
+  margin: 5px;
+`;
 const Agreement = styled.div`
   margin-top: 10px;
   display: flex;
@@ -72,8 +77,27 @@ const Button = styled.button`
 
 const Register = () => {
   const [checked, setChecked] = useState(true);
-  const handleChange = (event) => {
+  const handleCheck = (event) => {
     setChecked(event.target.checked);
+  };
+
+  const [newUser, setnewUser] = useState({
+    firstname: "",
+    lastname: "",
+    phone: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setnewUser((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async () => {
+    e.preventDefault();
   };
 
   return (
@@ -81,21 +105,59 @@ const Register = () => {
       <Wrapper>
         <Title>Create a new Account</Title>
         <Form>
-          <Input placeholder="First Name" />
-          <Input placeholder="Last Name" />
-          <Input placeholder="Phone Number" type="number" />
-          <Input placeholder="Email" type="email" />
-          <Input placeholder="Password" />
+          <Input
+            placeholder="First Name"
+            onChange={handleChange}
+            name="firstname"
+          />
+          <Input
+            placeholder="Last Name"
+            onChange={handleChange}
+            name="lastname"
+          />
+          <Input
+            placeholder="Phone Number"
+            type="number"
+            onChange={handleChange}
+            name="phone"
+          />
+          <Input
+            placeholder="Email"
+            type="email"
+            onChange={handleChange}
+            name="email"
+          />
+          <Input
+            placeholder="Password"
+            onChange={handleChange}
+            name="password"
+          />
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+              fontSize: "10px",
+              textAlign: "center",
+              marginTop: "5px",
+            }}
+            to="/login"
+          >
+            Already have an account?{" "}
+            <span style={{ textDecoration: "underline", color: "teal" }}>
+              Login here
+            </span>
+          </Link>
+          <ErrorMsg></ErrorMsg>
           <Agreement>
             <Checkbox
               checked={checked}
-              onChange={handleChange}
+              onChange={handleCheck}
               color="primary"
               inputProps={{ "aria-label": "primary checkbox" }}
             />
             <p>By clicking this, you agree to all our terms and conditions.</p>
           </Agreement>
-          <Button>Create Account</Button>
+          <Button onChange={handleSubmit}>Create Account</Button>
         </Form>
       </Wrapper>
     </Container>
