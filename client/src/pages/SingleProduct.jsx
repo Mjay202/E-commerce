@@ -20,6 +20,7 @@ const ImgContainer = styled.div`
 const Image = styled.img`
   height: 100%;
   width: 80%;
+  object-fit: cover;
   background-color: #d68080;
   transform: all 0.5s ease;
   
@@ -123,49 +124,53 @@ const Button = styled.button`
 const SingleProduct = () => {
   return (
     <>
-        <NavBar/>
-        <Advert/>
-        <Wrapper>
-          <ImgContainer>
-            <Image/>
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Denim Jumpsuit</Title>
-            <Desc>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ad debitis, inventore magnam similique in consequatur officia ducimus consectetur quia amet aliquid a excepturi repellat. Repellat quisquam incidunt doloremque provident.</Desc>
-            <Price>$150</Price>
-            <FilterContainer>
-              <FilterColor>
-                <ColorTitle>Color:</ColorTitle>
-                <ColorOption color='black'/>
-                <ColorOption color='darkgray'/>
-                <ColorOption color='gray'/>
-              </FilterColor>
-              <FilterSize>
-                <SizeTitle>Size:</SizeTitle>
-                <SizeOptions>
-                  <SizeOption>XL</SizeOption>
-                  <SizeOption>L</SizeOption>
-                  <SizeOption>M</SizeOption>
-                  <SizeOption>S</SizeOption>
-                  <SizeOption>XS</SizeOption>
-                </SizeOptions>
-              </FilterSize>
-            </FilterContainer>
-            <AddContainer>
-              <AmountContainer>
-                <Remove style={{cursor:'pointer'}}/>
-                <Amount>1</Amount>
-                <Add style={{cursor:'pointer'}}/>
-              </AmountContainer>
-              <Button>Add to Cart</Button>
-            </AddContainer>
-          </InfoContainer>
-        </Wrapper>
-        <Newsletter/>
-        <Footer/>
-    
+      <NavBar />
+      <Advert />
+      <Wrapper>
+        <ImgContainer>
+          <Image src="https://img.freepik.com/free-photo/woman-model-demonstrating-winter-cloths_1303-16949.jpg?w=360&t=st=1706837059~exp=1706837659~hmac=c6d300421eec096293b478906008eae13a9aec94a720cfd56828895a7ae3a4d2" />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>Denim Jumpsuit</Title>
+          <Desc>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ad
+            debitis, inventore magnam similique in consequatur officia ducimus
+            consectetur quia amet aliquid a excepturi repellat. Repellat
+            quisquam incidunt doloremque provident.
+          </Desc>
+          <Price>$150</Price>
+          <FilterContainer>
+            <FilterColor>
+              <ColorTitle>Color:</ColorTitle>
+              <ColorOption color="black" />
+              <ColorOption color="darkgray" />
+              <ColorOption color="gray" />
+            </FilterColor>
+            <FilterSize>
+              <SizeTitle>Size:</SizeTitle>
+              <SizeOptions>
+                <SizeOption>XL</SizeOption>
+                <SizeOption>L</SizeOption>
+                <SizeOption>M</SizeOption>
+                <SizeOption>S</SizeOption>
+                <SizeOption>XS</SizeOption>
+              </SizeOptions>
+            </FilterSize>
+          </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove style={{ cursor: "pointer" }} />
+              <Amount>1</Amount>
+              <Add style={{ cursor: "pointer" }} />
+            </AmountContainer>
+            <Button>Add to Cart</Button>
+          </AddContainer>
+        </InfoContainer>
+      </Wrapper>
+      <Newsletter />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default SingleProduct

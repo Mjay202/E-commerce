@@ -3,6 +3,7 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
 import {mobile} from '../responsive'
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   height: 60px;
@@ -15,6 +16,7 @@ const Container = styled.div`
   z-index: 3;
   ${mobile({ height: "20px" })}
 `;
+
 
 const Wrapper = styled.div`
   padding: 10px 20px;
@@ -111,8 +113,22 @@ const NavBar = () => {
           <Logo>JAYXIN.</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              to={"/register"}
+            >
+              REGISTER
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              to={"/login"}
+            >
+              LOGIN
+            </Link>
+          </MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
