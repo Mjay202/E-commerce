@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
 
@@ -7,40 +7,40 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(211, 20, 20, 0.2)),
-    url("https://images.unsplash.com/photo-1546213290-e1b492ab3eee?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    url("https://img.freepik.com/free-photo/beautiful-three-young-women-with-gift-bags-walk-city_1157-48967.jpg?w=826&t=st=1706906837~exp=1706907437~hmac=2814aca72e82fc4ec90afe4cd8b4bcb202b793af977e0cd6803ae5931d95a6b1")
       center;
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile({ width: "auto", heigth: 'auto'})}
+  ${mobile({ width: "auto", heigth: "auto" })}
 `;
 
 const Wrapper = styled.div`
   width: 30%;
   background-color: white;
+  opacity: 0.9;
   border-radius: 5px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   ${mobile({ width: "70%" })}
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   margin-bottom: 15px;
   width: 100%;
   display: flex;
   justify-content: center;
-  
-`
+`;
 const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-`
+`;
 const Input = styled.input`
-  padding: 10px;
+  padding: 7px;
   flex: 1;
-  margin: 10px;
+  margin: 7px;
   ${mobile({ border: "0.5px solid teal" })}
 `;
 const Create = styled.div`
@@ -56,11 +56,11 @@ const Create = styled.div`
     color: teal;
     font-weight: 400;
   }
-`
+`;
 const Button = styled.button`
   min-width: 20%;
   margin-top: 20px;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   font-size: 15px;
   transition: all 0.5s ease;
@@ -70,10 +70,8 @@ const Button = styled.button`
   &:hover {
     background-color: teal;
     color: white;
-
   }
- 
-`
+`;
 
 const Login = () => {
   return (
@@ -83,9 +81,23 @@ const Login = () => {
         <Form>
           <Input placeholder="Email" type="email" />
           <Input placeholder="Password" />
-          <Link>You do not remember your password?</Link>
           <Create>
-            <Link to="/register">
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                fontSize: "inherit",
+              }}
+            >
+              You do not remember your password?
+            </Link>
+          </Create>
+
+          <Create>
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              to="/register"
+            >
               Don't have an account? Create a new Account.
             </Link>
           </Create>
@@ -94,6 +106,6 @@ const Login = () => {
       </Wrapper>
     </Container>
   );
-}
+};
 
-export default Login
+export default Login;
