@@ -59,7 +59,7 @@ export const categoryItems = [
   },
   {
     id: 6,
-    img: "https://img.freepik.com/free-photo/high-heels-make-up-case_23-2147635498.jpg?w=740&t=st=1706830071~exp=1706830671~hmac=419cf1ea1322fd26f673c42d226be404492d91afb9783637a56b78237c4dd5a0",
+    img: "https://img.freepik.com/free-photo/model-career-kit-still-life_23-2150229753.jpg?w=826&t=st=1706832809~exp=1706833409~hmac=de6b4e59cca139547861e4e4fb82a87251b3cd760674fc453084e629a82afb94",
     title: "ACCESSORIES",
   },
   {

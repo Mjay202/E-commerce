@@ -15,8 +15,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  
   flex-wrap: wrap;
+  gap:10px;
   padding: 30px 0px;
   
   ${mobile({ flexDirection: "column" })}

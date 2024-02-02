@@ -64,8 +64,10 @@ const Icon = styled.div`
     background-color: #e9f5f5;
   }
 `;
+
 const Product = ({item}) => {
   return (
+
     <Container>
       <Circle>
         <Image src={item.img}/>
