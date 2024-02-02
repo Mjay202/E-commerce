@@ -16,7 +16,8 @@ const Container = styled.div`
 const Advert = () => {
   return (
     <Container>
-        Number one Best Selling Store in Africa!!! Best Deals, Varieties of Choices, Global brands.. </Container>
+      Number one Best Selling Store in Africa!!! Best Deals, Varieties of Choices, Global brands..
+    </Container>
   )
 }
 

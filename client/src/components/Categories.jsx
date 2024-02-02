@@ -7,7 +7,8 @@ import { mobile } from "../responsive";
 const Wrapper = styled.div`
   background-color: #fcf5f5;
   margin-top: 0px;
-  padding: 50px;
+  padding: 0px 10px;
+  padding-top: 100px;
 `;
 
 const Container = styled.div`
@@ -25,7 +26,7 @@ const Title = styled.div`
   
   text-align: center;
   letter-spacing: 3px;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 30px;
   ${mobile({ fontSize: "30px", marginBottom: "20px" })}
 `;
@@ -33,7 +34,7 @@ const Desc = styled.div`
  
   text-align: center;
   letter-spacing: 3px;
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 30px;
   ${mobile({ fontSize: "10px", marginBottom: "20px" })}
 `;

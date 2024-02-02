@@ -5,9 +5,15 @@ import styled from 'styled-components'
 import {mobile} from '../responsive'
 
 const Container = styled.div`
-    height: 60px;
-    ${mobile({height: "20px" })}
-
+  height: 60px;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: white;
+  z-index: 3;
+  ${mobile({ height: "20px" })}
 `;
 
 const Wrapper = styled.div`

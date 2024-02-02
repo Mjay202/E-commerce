@@ -6,12 +6,12 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   display: flex;
   flex: 1;
-  width: 30%;
+  min-width: 30%;
   position: relative;
   background-color: #f5fbfd;
-  height: 70vh;
+  height: 60vh;
   margin-top: 20px;
-  opacity: 0.5;
+  opacity: 0.8;
   margin: 5px;
   cursor: pointer;
   &:hover {
@@ -37,8 +37,7 @@ const Info = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-
-
+  color: #570716;
 `;
 
 const Title = styled.h1`
@@ -53,9 +52,11 @@ const Button = styled.button`
   background-color: white;
   color: gray;
   cursor: pointer;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
-    font-weight: 100;
+    font-weight: 700;
+    color: #ae3047;
+    
   }
 `;
 

@@ -44,7 +44,7 @@ export const categoryItems = [
   },
   {
     id: 3,
-    img: "https://img.freepik.com/free-photo/portrait-smiling-beautiful-girl-her-handsome-boyfriend-laughing-happy-cheerful-couple-sunglasses_158538-4999.jpg?w=740&t=st=1706799717~exp=1706800317~hmac=b2f420fcf7f942c63c861fc7da2e2a4b5d5e613008c9ed13441aac3bd1fc7846",
+    img: "https://img.freepik.com/free-photo/embracing-trendy-fashionable-couple-isolated-white-studio-background-caucasian-woman-man-posing-basic-minimal-stylish-clothes-concept-relations-fashion-beauty-love-copyspace_155003-36673.jpg?w=826&t=st=1706831131~exp=1706831731~hmac=dcacf43467e451b62e77432124c0b08b340af023f5b9e76ffd38345ffa590cfe",
     title: "COUPLE FASHION",
   },
   {
@@ -54,7 +54,7 @@ export const categoryItems = [
   },
   {
     id: 5,
-    img: "https://img.freepik.com/free-photo/pair-trainers_144627-3800.jpg?w=740&t=st=1706806049~exp=1706806649~hmac=8e88710c9db210534214472e77a42b628730af1062693631bc12b4abda3b68d8",
+    img: "https://img.freepik.com/free-photo/one-white-sneaker-shoe-isolated-white_93675-134695.jpg?w=826&t=st=1706830716~exp=1706831316~hmac=82cd99967098813e2b88a99257b4c46ad63d70a1ec84a7508940383eb93b8cba",
     title: "FOOTWEAR",
   },
   {
