@@ -20,13 +20,15 @@ const Title = styled.div`
   text-align: center;
   letter-spacing: 3px;
   font-size: 30px;
+  color: #570716;
   margin-bottom: 30px;
   ${mobile({ fontSize: "30px", marginBottom: "20px" })}
 `;
 const Desc = styled.div`
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   font-size: 20px;
+  color: #570716;
   margin-bottom: 30px;
   ${mobile({ fontSize: "10px", marginBottom: "20px" })}
 `;

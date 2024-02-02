@@ -87,27 +87,42 @@ export const popularProduct = [
   },
   {
     id: 2,
-    img: "https://source.unsplash.com/1200x800/?adidas-shoe",
-    name: "Adidas Prime Extra",
+    img: "https://img.freepik.com/free-photo/graphic-shirt-trendy-design-mockup_460848-12971.jpg?w=360&t=st=1706833535~exp=1706834135~hmac=d372b3800ff7fffd8421711db1ea950ef35ccd554c57ccb5acb464d8bf64e22e",
+    name: "Warning Shirt",
   },
   {
     id: 3,
-    img: "https://source.unsplash.com/1200x800/?white-shirt",
-    name: "White Shirt",
+    img: "https://img.freepik.com/free-photo/fashion-polo-shirt-men_74190-4858.jpg?w=826&t=st=1706833613~exp=1706834213~hmac=b52afb8bfe2544e2003379968671fa8caac19b142b18dd783640c9a7448298ca",
+    name: "Polo Shirt",
   },
   {
     id: 4,
-    img: "",
-    name: "",
+    img: "https://img.freepik.com/free-psd/two-shirts-are-checkered-surface-isolated-transparent-background_191095-22111.jpg?w=740&t=st=1706833647~exp=1706834247~hmac=bf73e051522555a80f709d69fb296d8d5fa2f6cf58835c90c65330cd53bd855b",
+    name: "Packing Shirt Men",
   },
   {
     id: 5,
-    img: "",
-    name: "",
+    img: "https://img.freepik.com/free-photo/trendy-top-design-mockup-presented-wooden-hanger_460848-13969.jpg?w=360&t=st=1706833799~exp=1706834399~hmac=3e2543c55be051dadb15f869a7a084c33afb79fc4e7d2cf1403ab20141af8ae5",
+    name: "Women free shirt",
   },
   {
     id: 6,
-    img: "",
-    name: "",
+    img: "https://img.freepik.com/free-photo/fashion-shoes-sneakers_1203-7529.jpg?w=826&t=st=1706833864~exp=1706834464~hmac=76f1e43224b3a7d697ec079eb0c4e16a9af2fb5acdba09ac564d288cd4278d92",
+    name: "fine sneakers",
+  },
+  {
+    id: 7,
+    img: "https://img.freepik.com/free-photo/new-pair-white-sneakers-isolated-white_93675-133039.jpg?w=826&t=st=1706833963~exp=1706834563~hmac=33e59d3014af96bccff4552d7fb84031e2cc81b5423f8b1c9cbffd37eacaf6ef",
+    name: "fine sneakers",
+  },
+  {
+    id: 8,
+    img: "https://img.freepik.com/free-photo/fashion-shoes-sneakers_1203-7529.jpg?w=826&t=st=1706833864~exp=1706834464~hmac=76f1e43224b3a7d697ec079eb0c4e16a9af2fb5acdba09ac564d288cd4278d92",
+    name: "fine sneakers",
+  },
+  {
+    id: 9,
+    img: "https://img.freepik.com/free-photo/fashion-shoes-sneakers_1203-7529.jpg?w=826&t=st=1706833864~exp=1706834464~hmac=76f1e43224b3a7d697ec079eb0c4e16a9af2fb5acdba09ac564d288cd4278d92",
+    name: "fine sneakers",
   },
 ];
