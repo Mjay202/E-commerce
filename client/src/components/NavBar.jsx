@@ -4,6 +4,8 @@ import React from 'react'
 import styled from 'styled-components'
 import {mobile} from '../responsive'
 import { Link } from 'react-router-dom';
+import logo1 from "../images/logo.png"
+
 
 const Container = styled.div`
   height: 60px;
@@ -74,8 +76,8 @@ const Center = styled.div`
   ${mobile({  flex: "2" })}
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
+const Logo = styled.div`
+ 
   ${mobile({ fontSize: "20px", marginLeft: '5px' })}
 `;
 
@@ -110,7 +112,7 @@ const NavBar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>JAYXIN.</Logo>
+          <Logo>{logo1} </Logo>
         </Center>
         <Right>
           <MenuItem>

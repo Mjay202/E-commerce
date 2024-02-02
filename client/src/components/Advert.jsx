@@ -8,8 +8,10 @@ const Container = styled.div`
   background-color: teal;
   font-size: 14px;
   font-weight: 500;
+  margin-top: 70px;
   color: white;
-  height: 30px;
+  padding: 10px;
+  height: 40px;
   ${mobile({ fontSize: "7px", margin: '20px 0px', width: '100vw ', height: '15px'})}
 `;
 

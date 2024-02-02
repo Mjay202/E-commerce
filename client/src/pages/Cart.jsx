@@ -9,6 +9,7 @@ import { mobile } from "../responsive";
 
 const Wrapper = styled.div`
   padding: 20px;
+  margin-top: 20px;
   ${mobile({ padding: "3px" , margin: '3px', width: '100%'})}
 `;
 
@@ -191,8 +192,8 @@ const Hr = styled.hr`
 const Cart = () => {
   return (
     <>
-      <NavBar />
       <Advert />
+      <NavBar />
       <Wrapper>
         <Title>
           YOUR CART
@@ -241,7 +242,7 @@ const Cart = () => {
             <Hr />
             <Product>
               <ProductDetails>
-                <Image src="https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <Image src="https://img.freepik.com/free-photo/new-pair-white-sneakers-isolated-white_93675-130969.jpg?w=740&t=st=1706838340~exp=1706838940~hmac=935d6dd0ca7200c7f9781a9fa0e3a7146f550629c0cd75d55a91a70855fe6687" />
                 <Details>
                   <ProductName>
                     <b>Product Name:</b> White sneakers
