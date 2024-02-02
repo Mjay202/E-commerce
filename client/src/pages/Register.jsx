@@ -3,14 +3,15 @@ import styled from 'styled-components'
 import Checkbox from '@material-ui/core/Checkbox';
 import { useState } from 'react';
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(211, 20, 20, 0.2)),
-    url("https://images.unsplash.com/photo-1561052967-61fc91e48d79?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(211, 20, 20, 0.5)),
+    url("https://img.freepik.com/free-photo/three-attractive-african-american-woman-brown-tunic-dress-posed-clothes-store-it-s-time-shopping_627829-695.jpg?w=826&t=st=1706905868~exp=1706906468~hmac=ef8e4174f0806a4757f6e14ff0210701100db6d9312834b215933d1e4239752b")
       center;
   display: flex;
   justify-content: center;
@@ -18,13 +19,13 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 40%;
+  width: 30%;
   background-color: white;
   border-radius: 5px;
   padding: 20px;
   ${mobile({ width: "70%" })}
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   margin-bottom: 15px;
   width: 100%;
   display: flex;
@@ -33,27 +34,30 @@ const Title = styled.h2`
 `
 const Form = styled.form`
   display: flex;
+  
   flex-wrap: wrap;
   justify-content: center;
 `
 const Input = styled.input`
-  padding: 10px;
+  padding: 7px;
   flex: 1;
-  margin: 10px;
+  margin: 5px;
   ${mobile({ border: "0.5px solid teal" })}
 `;
+
 const Agreement = styled.div`
   margin-top: 10px;
   display: flex;
   align-items: center;
   width: 100%;
+  font-size: 10px;
   justify-content: flex-start;
   ${mobile({ fontSize: "12px" })}
 `;
 const Button = styled.button`
   min-width: 30%;
   margin-top: 10px;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   font-size: 15px;
   transition: all 0.5s ease;
