@@ -95,7 +95,7 @@ const ListItems = styled.li`
 
   &:hover {
     transform: scale(1.02);
-    color: teal;
+    color: #ae3047;
   }
   ${mobile({
     width: "20%",
@@ -127,14 +127,14 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
   color: gray;
-  font-weight: 500;
+  font-weight: 300;
   transition: all 0.5s ease;
   cursor: pointer;
 
   &:hover {
-    color: teal;
-    font-weight: 400;
-    transform: scale(1.02);
+    color: #ae3047;
+    font-weight: 500;
+    transform: scale(1.01);
   }
 
   ${mobile({ width: "100%", fontSize: "12px", marginBottom: "2px" })}

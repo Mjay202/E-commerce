@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {mobile} from '../responsive'
 
 const Container = styled.div`
-  height: 70vh;
+  height: 90vh;
   background-color: #fcf5f5;
   display: flex;
   align-items: center;
@@ -41,15 +41,15 @@ const Input = styled.input`
   ${mobile({ flex: "7", marginLeft: "0px" })}
 `;
 const Button = styled.button`
-    flex: 1;
-    border: none;
-    background-color: teal;
-    color: white;
-    cursor: pointer;
+  flex: 1;
+  border: none;
+  background-color: #ae3047;
+  color: white;
+  cursor: pointer;
 
-    &:hover{
-        transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Newsletter = () => {
