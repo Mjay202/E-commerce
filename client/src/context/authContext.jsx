@@ -16,7 +16,7 @@ export const AuthContextProvider = ({children}) => {
         userDetails
         );
 
-        setcurrentUser(res)
+        setcurrentUser(res.data)
     }
 
     useEffect(() => {

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { AuthContext } from "../context/authContext";
 
 const Container = styled.div`
   width: 100vw;
@@ -85,12 +85,12 @@ const Button = styled.button`
 
 const Login = () => {
   const navigate = useNavigate();
-
+  const { login } = useContext(AuthContext);
   const [errMsg, seterrMsg] = useState("");
   const [userDetails, setuserDetails] = useState({
     email: "",
-    password: ""
-  })
+    password: "",
+  });
 
   const handleChange = (e) => {
     seterrMsg("");
@@ -104,10 +104,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "http://localhost:5200/api/auth/login",
-        userDetails
-      );
+      await login(userDetails)
       navigate("/");
       console.log(res);
     } catch (err) {
@@ -116,15 +113,23 @@ const Login = () => {
     }
   };
 
-
   return (
     <Container>
       <Wrapper>
         <Title>Log in to your Account</Title>
         <Form>
-          <Input placeholder="Email" type="email"  onChange={handleChange} name="email"/>
-          <Input placeholder="Password"    onChange={handleChange} name="password"/>
-          {errMsg && <ErrorMsg>{ errMsg}</ErrorMsg>}
+          <Input
+            placeholder="Email"
+            type="email"
+            onChange={handleChange}
+            name="email"
+          />
+          <Input
+            placeholder="Password"
+            onChange={handleChange}
+            name="password"
+          />
+          {errMsg && <ErrorMsg>{errMsg}</ErrorMsg>}
           <Create>
             <Link
               style={{
