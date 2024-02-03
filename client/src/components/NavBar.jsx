@@ -1,10 +1,11 @@
 import { Avatar, Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import {mobile} from '../responsive'
 import { Link } from 'react-router-dom';
-import logo1 from "../images/logo.png"
+import logo1 from "../images/logo.png";
+import { AuthContext } from '../context/authContext';
 
 
 const Container = styled.div`
@@ -99,6 +100,10 @@ const MenuItem = styled.div`
 `;
 
 const NavBar = () => {
+  const { currentUser } = useContext(AuthContext);
+  const user = currentUser.firstname.charAt(0);
+  const [userAvatarLetter, setuserAvatarLetter] = useState(user)
+//  setuserAvatarLetter(); 
   return (
     <Container>
       <Wrapper>
@@ -115,7 +120,7 @@ const NavBar = () => {
           <Logo>{logo1} </Logo>
         </Center>
         <Right>
-            <Avatar style={{backgroundColor: 'orange'}}>N</Avatar>
+        {currentUser && <Avatar style={{ backgroundColor: "#ae3047" }}>{ userAvatarLetter}</Avatar>}
           <MenuItem>
             <Link
               style={{ textDecoration: "none", color: "inherit" }}
