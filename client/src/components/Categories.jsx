@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { categoryItems } from '../data';
+import React from "react";
+import styled from "styled-components";
+import { categoryItems } from "../data";
 import CategoryItem from "./CatogoryItem";
 import { mobile } from "../responsive";
 
@@ -16,14 +16,19 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap:10px;
-  padding: 30px 0px;
-  
+  gap: 10px;
+  padding: 30px 5px;
+
   ${mobile({ flexDirection: "column" })}
 `;
 
+const Heading = styled.div`
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
 const Title = styled.div`
-  
   text-align: center;
   letter-spacing: 3px;
   font-size: 40px;
@@ -31,7 +36,6 @@ const Title = styled.div`
   ${mobile({ fontSize: "30px", marginBottom: "20px" })}
 `;
 const Desc = styled.div`
- 
   text-align: center;
   letter-spacing: 3px;
   font-size: 30px;
@@ -39,17 +43,18 @@ const Desc = styled.div`
   ${mobile({ fontSize: "10px", marginBottom: "20px" })}
 `;
 
-
 const Categories = () => {
   return (
     <>
       <Wrapper>
-        <Title>
-          <h3>•Categories•</h3>
-        </Title>
-        <Desc>
-          <h6>Shop from our varieties of category items in vogue</h6>
-        </Desc>
+        <Heading>
+          <Title>
+            <h3>•Categories•</h3>
+          </Title>
+          <Desc>
+            <h6>Shop from our varieties of category items in vogue</h6>
+          </Desc>
+        </Heading>
         <Container>
           {categoryItems.map((item) => (
             <CategoryItem item={item} key={item.id} />
@@ -58,6 +63,6 @@ const Categories = () => {
       </Wrapper>
     </>
   );
-}
+};
 
-export default Categories
+export default Categories;
