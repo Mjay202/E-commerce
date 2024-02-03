@@ -3,6 +3,7 @@ import { popularProduct } from "../data";
 import styled from "styled-components";
 import Product from "./Product";
 import { mobile } from "../responsive";
+import axios from "axios";
 
 const Wrapper = styled.div`
   background-color: white;
@@ -42,16 +43,20 @@ const Desc = styled.h2`
 const Products = () => {
   const [products, setproducts] = useState([]);
 
-  useEffect(async() => {
-    try {
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:5200/api/products/");
+        console.log(res.data);
+        setproducts(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-      const res = await axios.get("http://localhost:5200/api/auth/register");
-      
-    } catch (err) {
-      console.log(err)
-    }
-  }, [products])
-  
+    getProducts();
+  }, []);
+
   return (
     <>
       <Wrapper>
@@ -68,7 +73,7 @@ const Products = () => {
           </Desc>
         </Heading>
         <Container>
-          {popularProduct.map((item) => (
+          {products.map((item) => (
             <Product item={item} key={item.id} />
           ))}
         </Container>
