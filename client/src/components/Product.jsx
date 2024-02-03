@@ -2,6 +2,7 @@ import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@m
 import React from 'react'
 import styled from 'styled-components'
 import { mobile } from "../responsive";
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   flex: 1;
@@ -77,7 +78,9 @@ const Product = ({item}) => {
             <ShoppingCartOutlined />
           </Icon>
           <Icon>
-            <SearchOutlined />
+            <Link to={`/singleproduct/${item.id}`}>
+              <SearchOutlined />
+            </Link>
           </Icon>
           <Icon>
             <FavoriteBorderOutlined />
