@@ -1,4 +1,4 @@
-import { Badge } from '@material-ui/core';
+import { Avatar, Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
@@ -115,6 +115,7 @@ const NavBar = () => {
           <Logo>{logo1} </Logo>
         </Center>
         <Right>
+            <Avatar style={{backgroundColor: 'orange'}}>N</Avatar>
           <MenuItem>
             <Link
               style={{ textDecoration: "none", color: "inherit" }}
