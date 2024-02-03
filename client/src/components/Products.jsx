@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { popularProduct } from "../data";
 import styled from "styled-components";
 import Product from "./Product";
@@ -40,6 +40,18 @@ const Desc = styled.h2`
 `;
 
 const Products = () => {
+  const [products, setproducts] = useState([]);
+
+  useEffect(async() => {
+    try {
+
+      const res = await axios.get("http://localhost:5200/api/auth/register");
+      
+    } catch (err) {
+      console.log(err)
+    }
+  }, [products])
+  
   return (
     <>
       <Wrapper>

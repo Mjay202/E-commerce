@@ -60,13 +60,19 @@ const Button = styled.button`
 `;
 
 const CatogoryItem = ({ item }) => {
+  
   return (
     <Container>
       <Img src={item.img} />
       <Info>
-        <Title>{item.title}</Title>
+        <Title>{item.cat}</Title>
         <Button>
-          <Link to="/products/${item.cat}">SHOP NOW</Link>
+          <Link
+            style={{ textDecoration: "none", color: "inherit" }}
+            to={`/products/${item.cat}`}
+          >
+            SHOP NOW
+          </Link>
         </Button>
       </Info>
     </Container>
