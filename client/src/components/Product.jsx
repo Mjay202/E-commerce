@@ -57,11 +57,12 @@ const Icon = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
-  cursor:pointer;
+  cursor: pointer;
 
   &:hover {
-    transform: scale(1.2);
-    background-color: #e9f5f5;
+    transform: scale(1.1);
+    background-color: #ae3047;
+    color: white;
   }
 `;
 
