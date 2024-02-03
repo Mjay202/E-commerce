@@ -41,7 +41,7 @@ const Info = styled.div`
   color: #570716;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h2``;
 
 const Button = styled.button`
   border: none;

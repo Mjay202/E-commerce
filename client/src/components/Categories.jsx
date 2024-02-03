@@ -49,7 +49,11 @@ const Categories = () => {
       <Wrapper>
         <Heading>
           <Title>
-            <h3>•Categories•</h3>
+            <h3>
+              <span style={{ color: "#ae3047" }}>•</span>
+              Categories
+              <span style={{ color: "#ae3047" }}>•</span>
+            </h3>
           </Title>
           <Desc>
             <h6>Shop from our varieties of category items in vogue</h6>
