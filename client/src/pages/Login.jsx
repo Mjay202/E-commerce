@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Container = styled.div`
   width: 100vw;
@@ -46,6 +47,12 @@ const Input = styled.input`
   margin: 7px;
   ${mobile({ border: "0.5px solid teal" })}
 `;
+const ErrorMsg = styled.div`
+  color: red;
+  font-size: 10px;
+  text-align: center;
+  margin: 5px;
+`;
 const Create = styled.div`
   cursor: pointer;
   display: flex;
@@ -77,13 +84,47 @@ const Button = styled.button`
 `;
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const [errMsg, seterrMsg] = useState("");
+  const [userDetails, setuserDetails] = useState({
+    email: "",
+    password: ""
+  })
+
+  const handleChange = (e) => {
+    seterrMsg("");
+    setuserDetails((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5200/api/auth/login",
+        userDetails
+      );
+      navigate("/");
+      console.log(res);
+    } catch (err) {
+      seterrMsg(err.response.data);
+      console.log(err);
+    }
+  };
+
+
   return (
     <Container>
       <Wrapper>
         <Title>Log in to your Account</Title>
         <Form>
-          <Input placeholder="Email" type="email" />
-          <Input placeholder="Password" />
+          <Input placeholder="Email" type="email"  onChange={handleChange} name="email"/>
+          <Input placeholder="Password"    onChange={handleChange} name="password"/>
+          {errMsg && <ErrorMsg>{ errMsg}</ErrorMsg>}
           <Create>
             <Link
               style={{
@@ -104,7 +145,7 @@ const Login = () => {
               Don't have an account? Create a new Account.
             </Link>
           </Create>
-          <Button>Login</Button>
+          <Button onClick={handleSubmit}>Login</Button>
         </Form>
       </Wrapper>
     </Container>
