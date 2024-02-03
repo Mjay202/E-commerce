@@ -4,6 +4,9 @@ import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
 import Newsletter from "../components/Newsletter"
 import { Add, Remove } from "@material-ui/icons"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { useLocation } from "react-router-dom"
 
 const Wrapper = styled.div`
   display: flex;
@@ -122,6 +125,24 @@ const Button = styled.button`
 
 
 const SingleProduct = () => {
+  const [product, setproduct] = useState([]);
+  const location = useLocation();
+  const prodId = location.pathname.split("/")[2];
+  console.log(prodId);
+
+  // useEffect(() => {
+  //   const getProduct = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:5200/api/products/");
+  //       console.log(res.data);
+  //       setproduct(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+
+  //   getProduct();
+  // }, []);
   return (
     <>
       <NavBar />
