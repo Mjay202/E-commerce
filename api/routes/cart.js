@@ -34,6 +34,14 @@ router.put("/:id", async(req, res) => {
 
 //DELETE CART
 
+router.delete("/:id", async(req, res) => {
+  try {
+    await Cart.findByIdAndDelete(req.params.id)
+    res.status(200).json("Deleted successfully")
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
 // GET CART (takes user_id)
 
 router.get("/:id", async(req, res) => {
@@ -49,5 +57,13 @@ router.get("/:id", async(req, res) => {
 
 
 // GET ALL CART (for Admin)
+router.get("/:id", async (req, res) => {
+  try {
+    const userCart = await Cart.find({ userId: req.params.id });
+    res.status(200).json(userCart);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 export default router;
