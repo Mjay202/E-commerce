@@ -18,10 +18,35 @@ router.post("/:id", async (req, res) => {
 
 // UPDATE CART
 
+router.put("/:id", async(req, res) => {
+    const cartId = req.params.id
+    try {
+      const updatedCart =  await Cart.findByIdAndUpdate(
+            cartId,
+            { $set: req.body },
+            {new: true}
+        )
+
+        res.status(200).json(updatedCart)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 //DELETE CART
 
 // GET CART (takes user_id)
 
+router.get("/:id", async(req, res) => {
+    
+    try {
+        const userCart = await Cart.find({ userId: req.params.id });
+        res.status(200).json(userCart);
+    } catch (err) {
+        res.status(500).json(err)
+    }
+    
+})
 
 
 // GET ALL CART (for Admin)
