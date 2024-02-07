@@ -1,5 +1,5 @@
 import express from "express";
-import { verifyTokenAndAuthorization } from "./verifyToken.js";
+import { verifyTokenAndAdmin, verifyTokenAndAuthorization } from "./verifyToken.js";
 const router = express.Router();
 import Cart from "../models/Cart.js";
 
@@ -34,7 +34,7 @@ router.put("/:id", async(req, res) => {
 
 //DELETE CART
 
-router.delete("/:id", async(req, res) => {
+router.delete("/:id", verifyTokenAndAuthorization, async(req, res) => {
   try {
     await Cart.findByIdAndDelete(req.params.id)
     res.status(200).json("Deleted successfully")
@@ -44,7 +44,7 @@ router.delete("/:id", async(req, res) => {
 })
 // GET CART (takes user_id)
 
-router.get("/:id", async(req, res) => {
+router.get("/:id", verifyToken, async(req, res) => {
     
     try {
         const userCart = await Cart.find({ userId: req.params.id });
@@ -57,10 +57,10 @@ router.get("/:id", async(req, res) => {
 
 
 // GET ALL CART (for Admin)
-router.get("/:id", async (req, res) => {
+router.get("/",verifyTokenAndAdmin, async (req, res) => {
   try {
-    const userCart = await Cart.find({ userId: req.params.id });
-    res.status(200).json(userCart);
+    const usersCart = await Cart.find();
+    res.status(200).json(usersCart);
   } catch (err) {
     res.status(500).json(err);
   }

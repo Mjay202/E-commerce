@@ -25,7 +25,7 @@ export const verifyTokenAndAuthorization = (req, res, next) => {
             next();
         }
         else {
-            return res.status(403).json("You are not authenticated buddy!")
+            return res.status(403).json("You are not authourized to do this buddy!")
         }
         
     })
