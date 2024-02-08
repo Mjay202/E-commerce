@@ -53,7 +53,6 @@ router.get("/stats", async (req, res) => {
       return res.status(500).json(err)
   }
 
- 
 });
 
 // GET A USER RECORD
