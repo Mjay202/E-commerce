@@ -32,7 +32,6 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
 });
 
 // GET USER STATS THROUGH AGGREGATE QUERY
-
 router.get("/stats", async (req, res) => {
   try {
 
