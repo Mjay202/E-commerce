@@ -1,5 +1,5 @@
 import express from "express";
-import { verifyTokenAndAdmin, verifyTokenAndAuthorization } from "./verifyToken.js";
+import { verifyToken, verifyTokenAndAdmin, verifyTokenAndAuthorization } from "./verifyToken.js";
 const router = express.Router();
 import Cart from "../models/Cart.js";
 
