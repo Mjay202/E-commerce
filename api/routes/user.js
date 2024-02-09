@@ -48,7 +48,7 @@ router.get("/stats", async (req, res) => {
             },
           ]);
 
-      return res.status(200).json(lastYear)
+      return res.status(200).json(data)
 
   } catch (err) {
       return res.status(500).json(err)
