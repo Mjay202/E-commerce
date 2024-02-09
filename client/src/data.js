@@ -39,7 +39,7 @@ export const categoryItems = [
   },
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1589465885857-44edb59bbff2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://img.freepik.com/free-photo/woman-orange-oversized-jacket-street-style-apparel-full-body_53876-104315.jpg?w=360&t=st=1707512138~exp=1707512738~hmac=346cdfa364655f4e3dd1045f854406751f00998a90679edc23bdfcd9d467ee10",
     cat: "WOMEN WEARS",
   },
   {
