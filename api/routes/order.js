@@ -65,6 +65,7 @@ router.get("/", async (req, res) => {
     const date = new Date()
     const lastMonth = new Date(date.setMonth(date.getMonth() - 1));
     const prevMonth = new Date(date.setMonth(lastMonth.getMonth() - 1));
+    
     try {
         const sales = await Order.aggregate([
             {$match: {createdAt: {$gte: prevMonth}}},
