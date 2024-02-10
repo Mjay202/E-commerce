@@ -132,6 +132,11 @@ const SingleProduct = () => {
   const location = useLocation();
   const prodId = location.pathname.split("/")[2];
 
+  const addToCart = (e) => {
+    e.preventDefault()
+
+    
+  }
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -187,7 +192,7 @@ const SingleProduct = () => {
               <Amount>{quantity}</Amount>
               <Add onClick={increaseQuantity} style={{ cursor: "pointer" }} />
             </AmountContainer>
-            <Button>Add to Cart</Button>
+            <Button onClick={addToCart}>Add to Cart</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
