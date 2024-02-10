@@ -3,7 +3,7 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import {mobile} from '../responsive'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo1 from "../images/logo.png";
 import { AuthContext } from '../context/authContext';
 
@@ -100,9 +100,17 @@ const MenuItem = styled.div`
 `;
 
 const NavBar = () => {
-  const { currentUser } = useContext(AuthContext);
-  const user = currentUser.firstname.charAt(0);
+  const navigate = useNavigate()
+  const { currentUser, logout } = useContext(AuthContext);
+  const user = ""
+  if(currentUser) user = currentUser.firstname.charAt(0);
   const [userAvatarLetter, setuserAvatarLetter] = useState(user)
+
+  const loggedOut = (e) =>{
+    e.preventDefault()
+    logout()
+    navigate("/")
+  }
 //  setuserAvatarLetter(); 
   return (
     <Container>
@@ -120,23 +128,34 @@ const NavBar = () => {
           <Logo>{logo1} </Logo>
         </Center>
         <Right>
-        {currentUser && <Avatar style={{ backgroundColor: "#ae3047" }}>{ userAvatarLetter}</Avatar>}
-          <MenuItem>
-            <Link
-              style={{ textDecoration: "none", color: "inherit" }}
-              to={"/register"}
-            >
-              REGISTER
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link
-              style={{ textDecoration: "none", color: "inherit" }}
-              to={"/login"}
-            >
-              LOGIN
-            </Link>
-          </MenuItem>
+          {currentUser ? (
+            <>
+              <Avatar style={{ backgroundColor: "#ae3047" }}>
+                {userAvatarLetter}
+              </Avatar>
+              <MenuItem onClick={loggedOut}> LOGOUT </MenuItem>
+            </>
+          ) : (
+            <>
+              <MenuItem>
+                <Link
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  to={"/register"}
+                >
+                  REGISTER
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  to={"/login"}
+                >
+                  LOGIN
+                </Link>
+              </MenuItem>
+            </>
+          )}
+
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
