@@ -102,7 +102,7 @@ const MenuItem = styled.div`
 const NavBar = () => {
   const navigate = useNavigate()
   const { currentUser, logout } = useContext(AuthContext);
-  const user = ""
+  let user = ""
   if(currentUser) user = currentUser.firstname.charAt(0);
   const [userAvatarLetter, setuserAvatarLetter] = useState(user)
 
