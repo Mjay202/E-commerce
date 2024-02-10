@@ -15,10 +15,13 @@ export const AuthContextProvider = ({children}) => {
         "http://localhost:5200/api/auth/login",
         userDetails
         );
-
         setcurrentUser(res.data)
     }
 
+    const logout = async() => {
+        await axios.post("http://localhost:5200/api/auth/logout")
+        setcurrentUser(null)
+    }
     useEffect(() => {
       
         localStorage.setItem("user", JSON.stringify(currentUser))
