@@ -28,6 +28,7 @@ const Heading = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
+
 const Title = styled.div`
   text-align: center;
   letter-spacing: 3px;
