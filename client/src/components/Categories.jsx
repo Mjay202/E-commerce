@@ -36,6 +36,7 @@ const Title = styled.div`
   margin-bottom: 30px;
   ${mobile({ fontSize: "30px", marginBottom: "20px" })}
 `;
+
 const Desc = styled.div`
   text-align: center;
   letter-spacing: 3px;
