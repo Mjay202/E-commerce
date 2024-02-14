@@ -27,7 +27,6 @@ connect(process.env.MONGO_URL)
 app.use(json());
 app.use(cors());
 app.use(cookieparser());
-
 app.get("/api/test", () => {
   console.log("test is successful");
 });
