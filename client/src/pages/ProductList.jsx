@@ -73,6 +73,7 @@ const ProductList = () => {
           </FilterItems>
         </Left>
         <Right>
+          
           <FilterTitle>Sort Products:</FilterTitle>
           <FilterItems>
             <Option selected> Newest </Option>
