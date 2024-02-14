@@ -32,6 +32,7 @@ app.get("/api/test", () => {
   console.log("test is successful");
 });
 
+
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/products", productRoute);
